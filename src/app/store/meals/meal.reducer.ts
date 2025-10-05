@@ -11,7 +11,7 @@ export interface MealState extends EntityState<Meal> {
 export const adapter: EntityAdapter<Meal> = createEntityAdapter<Meal>();
 
 export const initialState: MealState = adapter.getInitialState({
-  loading: true,
+  loading: false,
   error: null
 });
 
