@@ -1,0 +1,68 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--ion-color-medium);
+  
+  ion-icon {
+    margin-bottom: 1rem;
+    color: var(--ion-color-medium);
+  }
+  
+  h2 {
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.new-meal-button {
+  --border-radius: 30px !important;
+  --color: var(--ion-color-primary);
+  --border-color: var(--ion-color-primary);
+  
+  ion-icon {
+    color: var(--ion-color-primary);
+    margin-right: 8px;
+    margin-bottom: 0;
+  }
+}
+
+ion-item {
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+}
+
+ion-avatar {
+  width: 40px;
+  height: 40px;
+  
+  ion-icon {
+    color: var(--ion-color-primary);
+  }
+}
+
+ion-label h2 {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+ion-label p {
+  color: var(--ion-color-medium);
+  font-size: 0.9rem;
+}
+
+// Styling for the delete button in meal items
+ion-item ion-button {
+  --padding: 8px 12px;
+  height: 36px;
+  margin: 4px;
+}

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add New Meal</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="mealForm" (ngSubmit)="saveMeal()">
+    <ion-item>
+      <ion-label position="stacked">Meal Title</ion-label>
+      <ion-input 
+        formControlName="title" 
+        placeholder="Enter meal title"
+        type="text">
+      </ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="mealForm.get('title')?.invalid && mealForm.get('title')?.touched">
+      <small>Title is required (minimum 3 characters)</small>
+    </div>
+
+    <ion-item>
+      <ion-label position="stacked">Date</ion-label>
+      <ion-datetime 
+        formControlName="date"
+        display-format="MMM DD, YYYY"
+        picker-format="MMM DD YYYY">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-button 
+      expand="block" 
+      type="submit" 
+      [disabled]="mealForm.invalid"
+      class="ion-margin-top">
+      Add Meal
+    </ion-button>
+  </form>
+</ion-content>

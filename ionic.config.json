@@ -1,0 +1,7 @@
+{
+  "name": "mealmanager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
